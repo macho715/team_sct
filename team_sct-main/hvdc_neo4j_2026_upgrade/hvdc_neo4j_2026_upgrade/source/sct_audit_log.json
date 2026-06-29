@@ -1,0 +1,90 @@
+{
+  "audit_id": "sct-ai-ready-patch-20260614",
+  "source_file": "sct.html",
+  "generated_at": "2026-06-14T17:35:31+04:00",
+  "verdict": "PASS",
+  "patch_scope": [
+    "Added required AI node metadata: node_type, status, evidence, business_rule, last_updated, next_action.",
+    "Added required AI edge metadata: edge_type, status, evidence, business_rule, last_updated, next_action.",
+    "Embedded JSON-LD and machine-readable Graph JSON in the HTML.",
+    "Added HTML tooltip evidence and sidebar AI metadata panel.",
+    "Added export buttons for Graph JSON, JSON-LD, Audit Log, and Markdown summary.",
+    "Generated external graph_data.json, graph_data.jsonld, audit_log.json, summary.md, schema, SHACL, and XLSX report."
+  ],
+  "validation_summary": {
+    "verdict": "PASS",
+    "generated_at": "2026-06-14T17:35:31+04:00",
+    "nodes_total": 191,
+    "edges_total": 286,
+    "nodes_with_required_metadata": 191,
+    "edges_with_required_metadata": 286,
+    "node_status_counts": {
+      "AMBER": 27,
+      "PASS": 164
+    },
+    "edge_status_counts": {
+      "AMBER": 8,
+      "PASS": 278
+    },
+    "top_node_types": {
+      "Document": 62,
+      "MarineOperation": 10,
+      "Person": 9,
+      "ActorRole": 9,
+      "OffshoreStagingNode": 8,
+      "RoutingPattern": 8,
+      "WarehouseTask": 6,
+      "Standard": 6,
+      "CommunicationEvent": 6,
+      "CustomsEntry": 5,
+      "BusinessRule": 5,
+      "SiteReceipt": 4,
+      "MilestoneEvent": 4,
+      "EvidenceAssertion": 4,
+      "Site": 4,
+      "CostPolicy": 4,
+      "InspectionEvent": 3,
+      "Invoice": 3,
+      "AuditRecord": 3,
+      "Port": 3
+    },
+    "top_edge_types": {
+      "references": 171,
+      "performs_role": 39,
+      "implements_domain_model": 17,
+      "shares_data_with": 15,
+      "business_rule_for": 14,
+      "conceptually_related_to": 11,
+      "cites_evidence": 8,
+      "supports": 3,
+      "semantically_similar_to": 2,
+      "supports_process": 1,
+      "executes_against": 1,
+      "boundary_constrained_by": 1,
+      "distinct_governance_principle": 1,
+      "marine_charge_evidence_for": 1,
+      "records_proof_artifact": 1
+    },
+    "missing_node_metadata": [],
+    "missing_edge_metadata": [],
+    "operational_truth_note": "This graph is AI-ready semantic/evidence graph. It is not live operational truth until source-system evidence and Foundry Action write-back are approved."
+  },
+  "field_coverage": {
+    "node_metadata_coverage_pct": 100.0,
+    "edge_metadata_coverage_pct": 100.0
+  },
+  "review_notes": [
+    "Operational status is not inferred as live logistics truth. PASS/AMBER here is graph AI-readiness/control status.",
+    "AMBER nodes indicate risk/control/guard concepts or insufficient source reference, not necessarily a failed shipment.",
+    "Inferred edges remain AMBER until source evidence is reviewed."
+  ],
+  "human_gate_required": true,
+  "rules_checked": [
+    "G-AI-001",
+    "G-AI-002",
+    "G-OWN-001",
+    "G-ROUTE-001",
+    "G-WHP-001",
+    "G-MOSB-001"
+  ]
+}

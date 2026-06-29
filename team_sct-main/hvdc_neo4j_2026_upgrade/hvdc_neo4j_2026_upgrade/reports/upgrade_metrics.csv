@@ -1,0 +1,9 @@
+metric,value
+nodes_total,191
+relationships_total,286
+evidence_rows_total,1908
+risk_gates_total,35
+node_pass,164
+node_amber,27
+edge_pass,278
+edge_amber,8

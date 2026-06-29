@@ -1,0 +1,23 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix hvdc: <https://samsungcnt-hvdc.example/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+hvdc:AIReadyNodeShape a sh:NodeShape ;
+  sh:targetClass hvdc:GraphNode ;
+  sh:property [ sh:path hvdc:nodeType ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path hvdc:status ; sh:minCount 1 ; sh:in ("PASS" "AMBER" "FAIL" "ZERO") ] ;
+  sh:property [ sh:path hvdc:evidence ; sh:minCount 1 ] ;
+  sh:property [ sh:path hvdc:businessRule ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path hvdc:lastUpdated ; sh:minCount 1 ; sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path hvdc:nextAction ; sh:minCount 1 ; sh:datatype xsd:string ] .
+
+hvdc:AIReadyEdgeShape a sh:NodeShape ;
+  sh:targetClass hvdc:GraphRelationship ;
+  sh:property [ sh:path hvdc:fromNode ; sh:minCount 1 ] ;
+  sh:property [ sh:path hvdc:toNode ; sh:minCount 1 ] ;
+  sh:property [ sh:path hvdc:edgeType ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path hvdc:status ; sh:minCount 1 ; sh:in ("PASS" "AMBER" "FAIL" "ZERO") ] ;
+  sh:property [ sh:path hvdc:evidence ; sh:minCount 1 ] ;
+  sh:property [ sh:path hvdc:businessRule ; sh:minCount 1 ; sh:datatype xsd:string ] ;
+  sh:property [ sh:path hvdc:lastUpdated ; sh:minCount 1 ; sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path hvdc:nextAction ; sh:minCount 1 ; sh:datatype xsd:string ] .

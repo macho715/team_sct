@@ -1,0 +1,40 @@
+{
+  "fix1_removed_nodes": [
+    "claude_settings_local",
+    "claude_settings_local_permissions",
+    "claude_settings_local_permissions_allow"
+  ],
+  "fix1_removed_edges": 2,
+  "fix6_paths_masked": 58,
+  "fix2_merged": {
+    "concept_anykey_resolution": "concept_any_key_resolution",
+    "concept_master_ontology": "consolidated_00_master_ontology",
+    "consolidated_06_site_receipt": "concept_site_receipt",
+    "consolidated_07_port_call": "concept_port_call",
+    "consolidated_08_approval_action": "concept_approval_action",
+    "consolidated_08_audit_record": "concept_audit_record",
+    "consolidated_08_communication_event": "concept_communication_event"
+  },
+  "fix3_new_edges": [
+    "concept_shipment_unit -[references]-> concept_hvdc_code_tag",
+    "concept_hvdc_code_tag -[conceptually_related_to]-> concept_identifier",
+    "concept_any_key_resolution -[references]-> concept_hvdc_code_tag"
+  ],
+  "fix2_dropped_selfloops": 0,
+  "fix2_dropped_dupedges": 1,
+  "fix5_predicate_relabeled": 39,
+  "fix4_comm0_relabeled": 24,
+  "fix4_comm0_new_label": "Cost/Material/Port (05–07)",
+  "result_stats": {
+    "nodes": 188,
+    "edges": 283,
+    "communities": 14,
+    "inferred": 15,
+    "hyperedges": 9
+  },
+  "result_ftCounts": {
+    "document": 20,
+    "concept": 156,
+    "rationale": 12
+  }
+}

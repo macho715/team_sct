@@ -1,0 +1,8 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "graph-preview", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8765", "--directory", "graphify-out"], "port": 8765 },
+    { "name": "sct-preview", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8766", "--directory", "sct_ai_ready_bundle"], "port": 8766 },
+    { "name": "sct-operator", "runtimeExecutable": "python", "runtimeArgs": ["-m", "http.server", "8137", "--directory", "sct_operator_work_context_bundle"], "port": 8137 }
+  ]
+}
